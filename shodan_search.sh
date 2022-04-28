@@ -1,5 +1,5 @@
 #!/bin/bash
-#shodan init 3E6jUTsuVaHlvfZD2KH4XQXUwxU8CeuT
+#shodan init 
 #echo "Пошук........" 
 echo "Пошук по параметрах \"$1\""
 shodan search --limit 1000 $1 | awk {'print $1'} | awk '!seen[$0]++' > /home/kali/Downloads/prerelease/ranges.txt
